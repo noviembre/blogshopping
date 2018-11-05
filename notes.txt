@@ -1,0 +1,13 @@
+php storm shorcuts:
+1.  Toggle sidebar = Alt + 1
+2.  Show breadcrumbs:
+    Settings: breadcrumbs
+3.  phpstorm themes:
+    daylerees.github.io
+4.  keymap on settings
+5.  Go to a symbol/function  |   F9
+6.  Go to last edit location    |   Cmd + Shift + Del
+7.  Navigate folders(floating navbar) |     F12/Alt+Home
+8.  create a file in the current directory  | Ctrl + Alt + Insert
+9.  Go to a Directory   | F10 : views
+10  Recent files | F12/cmd + E
