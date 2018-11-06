@@ -12,7 +12,7 @@ class ShoppingController extends Controller
     {
         $pdt = Product::find(request()->pdt_id);
 
-        $cart = Cart::add([
+        $cartItem = Cart::add([
 
             'id' => $pdt->id,
             'name' => $pdt->name,
@@ -21,12 +21,15 @@ class ShoppingController extends Controller
 
         ]);
 
+        Cart::associate($cartItem->rowId, 'App\Product');
+
         return redirect()->route('cart');
     }
 
 
     public function cart()
     {
+        //Cart::destroy(); - if you wan to delete and item
         return view('cart');
     }
 }
