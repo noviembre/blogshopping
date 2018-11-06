@@ -26,17 +26,24 @@
                         <h3 class="product-details-info-title">{{ $product->name }}</h3>
                         <p class="product-details-info-text">{{ $product->description }} </p>
 
-                        <div class="quantity">
-                            <a href="#" class="quantity-minus">-</a>
-                            <input title="Qty" class="email input-text qty text" type="text" value="2">
-                            <a href="#" class="quantity-plus">+</a>
-                        </div>
+                        <form action="{{ route('cart.add') }}" method="post">
 
-                        <a href="19_cart.html" class="btn btn-medium btn--primary">
-                            <span class="text">Add to Cart</span>
-                            <i class="seoicon-commerce"></i>
-                            <span class="semicircle"></span>
-                        </a>
+                            {{ csrf_field() }}
+
+                            <div class="quantity">
+                                <a href="#" class="quantity-minus">-</a>
+                                <input name="qty" title="Qty" class="email input-text qty text" type="text" value="2">
+                                <input name="pdt_id" value="{{ $product->id }}" type="hidden">
+                                <a href="#" class="quantity-plus">+</a>
+                            </div>
+
+                            <button href="19_cart.html" class="btn btn-medium btn--primary">
+                                <span class="text">Add to Cart</span>
+                                <i class="seoicon-commerce"></i>
+                                <span class="semicircle"></span>
+                            </button>
+
+                        </form>
                     </div>
                 </div>
             </div>

@@ -26,6 +26,12 @@ Route::get('product/{id}', [
 
 ]);
 
+Route::post('cart/add', [
+
+    'uses' => 'ShoppingController@add_to_cart',
+    'as' => 'cart.add'
+
+]);
 
 Route::resource('products', 'ProductsController');
 Auth::routes();
