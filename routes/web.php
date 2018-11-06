@@ -26,10 +26,19 @@ Route::get('product/{id}', [
 
 ]);
 
+#=================   Add to Cart   ====================
 Route::post('cart/add', [
 
     'uses' => 'ShoppingController@add_to_cart',
     'as' => 'cart.add'
+
+]);
+
+#=================   Cart Page   ====================
+Route::get('/cart', [
+
+    'uses' => 'ShoppingController@cart',
+    'as' => 'cart'
 
 ]);
 

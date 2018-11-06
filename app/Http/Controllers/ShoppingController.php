@@ -21,9 +21,12 @@ class ShoppingController extends Controller
 
         ]);
 
-        dd($cart);
+        return redirect()->route('cart');
+    }
 
 
-
+    public function cart()
+    {
+        return view('cart');
     }
 }
