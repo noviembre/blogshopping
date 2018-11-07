@@ -38,4 +38,21 @@ class ShoppingController extends Controller
         Cart::remove($id);
         return redirect()->back();
     }
+
+    public function incr($id, $qty)
+    {
+
+        Cart::update($id, $qty + 1);
+        return redirect()->back();
+
+    }
+
+    public function decr($id, $qty)
+    {
+        Cart::update($id, $qty - 1);
+        return redirect()->back();
+
+    }
+
+
 }

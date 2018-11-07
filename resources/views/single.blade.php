@@ -32,7 +32,7 @@
 
                             <div class="quantity">
                                 <a href="#" class="quantity-minus quantity-minus-d">-</a>
-                                <input name="qty" title="Qty" class="email input-text qty text" type="text" value="1">
+                                <input name="qty" title="Qty" class="email input-text qty text" type="text" value="1 ">
                                 <input name="pdt_id" value="{{ $product->id }}" type="hidden">
                                 <a href="#" class="quantity-plus quantity-plus-d">+</a>
                             </div>
