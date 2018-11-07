@@ -32,4 +32,10 @@ class ShoppingController extends Controller
         //Cart::destroy(); - if you wan to delete and item
         return view('cart');
     }
+
+    public function cart_delete($id)
+    {
+        Cart::remove($id);
+        return redirect()->back();
+    }
 }
