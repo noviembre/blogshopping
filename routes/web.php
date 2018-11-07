@@ -50,7 +50,7 @@ Route::get('cart/delete/{id}', [
 
 ]);
 
-#=================   decrement   ====================
+#=================   increment   ====================
 
 Route::get('cart/incr/{id}/{qty}', [
 
@@ -59,13 +59,24 @@ Route::get('cart/incr/{id}/{qty}', [
 
 ]);
 
-
+#=================   decrement   ====================
 Route::get('cart/decr/{id}/{qty}', [
 
     'uses' => 'ShoppingController@decr',
     'as' => 'cart.decr'
 
 ]);
+
+
+#=================   Rapid Add (Cart)   ===============
+
+Route::get('/cart/rapid/add/{id}',[
+
+    'uses' => 'ShoppingController@rapid_add',
+    'as' => 'cart.rapid.add'
+
+]);
+
 
 Route::resource('products', 'ProductsController');
 Auth::routes();
